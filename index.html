@@ -89,11 +89,41 @@
                         <li>status (New status of the work order allowed values are- 'open', 'complete', 'onHold', 'inProgress')</li>
                     </ul>
                 </div>
-                <p>On success success message message will be returned in <b>message</b> key. For example if the request was to change status to onHold</p>
+                <p>On success success message message will be returned in <b>message</b> key. For example if the request was to change status to <b>onHold</b>.</p>
                 <pre>
                     {
                         "message": "status changed to onHold"
                     }
+                </pre>
+            </div><!-- /.blog-post -->
+
+            <div class="blog-post">
+                <h2>Work Order List</h2>
+                <p>Provides all the work orders of user's company.</p>
+                <div class="highlight">
+                    <h4><span class="key">Endpoint</span>: <span class="val">https://demo-api.onupkeep.com/api/public/workorders</span></h4>
+                    <h4><span class="key">Method</span>: <span class="val">POST</span></h4>
+                    <h4><span class="key">Parameters</span>:</h4>
+                    <ul>
+                        <li>sessionToken (The session token obtained from login)</li>
+                    </ul>
+                </div>
+                <p>On success array of work order object will be returned having the keys- id, status, title, description, dueDate, createdAt, workOrderNo, category, time, cost, assignedBy, assignedTo, location(keys not set will be excluded). Response will be similar to.</p>
+                <pre>
+                    [
+                         {
+                            "id": "wfhn43LMh3"
+                            "status": "open"
+                            "title": "Repair sink"
+                            "dueDate": "2016-10-22T01:00:00.000Z"
+                            "createdAt": "2016-10-20T10:17:13.712Z"
+                            "updatedAt": "2016-10-20T10:17:13.712Z"
+                            "workOrderNo": "150"
+                            "assignedBy": "abc@xyz.com"
+                            "assignedTo": "def@xyz.com"
+                          }
+                          ...
+                    ]
                 </pre>
             </div><!-- /.blog-post -->
 
