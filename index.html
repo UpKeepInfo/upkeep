@@ -45,8 +45,8 @@
                     <h4><span class="key">Method</span>: <span class="val">POST</span></h4>
                     <h4><span class="key">Parameters</span>:</h4>
                     <ul>
-                        <li>username (User name of upkeep account)</li>
-                        <li>password (Password of upkeep account)</li>
+                        <li>username - User name of upkeep account.</li>
+                        <li>password  - Password of upkeep account.</li>
                     </ul>
                 </div>
                 <p>On success the session token will be returned.</p>
@@ -65,7 +65,7 @@
                     <h4><span class="key">Method</span>: <span class="val">POST</span></h4>
                     <h4><span class="key">Parameters</span>:</h4>
                     <ul>
-                        <li>sessionToken (The session token obtained from login)</li>
+                        <li>sessionToken - The session token obtained from login.</li>
                     </ul>
                 </div>
                 <p>On success success message message will be returned in <b>message</b> key.</p>
@@ -84,9 +84,9 @@
                     <h4><span class="key">Method</span>: <span class="val">POST</span></h4>
                     <h4><span class="key">Parameters</span>:</h4>
                     <ul>
-                        <li>sessionToken (The session token obtained from login)</li>
-                        <li>id (Id of the work order whose status is to be changed)</li>
-                        <li>status (New status of the work order allowed values are- 'open', 'complete', 'onHold', 'inProgress')</li>
+                        <li>sessionToken - The session token obtained from login.</li>
+                        <li>id - Id of the work order whose status is to be changed.</li>
+                        <li>status - New status of the work order allowed values are- 'open', 'complete', 'onHold', 'inProgress'.</li>
                     </ul>
                 </div>
                 <p>On success success message message will be returned in <b>message</b> key. For example if the request was to change status to <b>onHold</b>.</p>
@@ -105,7 +105,7 @@
                     <h4><span class="key">Method</span>: <span class="val">POST</span></h4>
                     <h4><span class="key">Parameters</span>:</h4>
                     <ul>
-                        <li>sessionToken (The session token obtained from login)</li>
+                        <li>sessionToken - The session token obtained from login.</li>
                     </ul>
                 </div>
                 <p>On success array of work order object will be returned having the keys- <b>id, status, title, description, dueDate, createdAt, workOrderNo, category, time, cost, assignedBy, assignedTo, asset, location</b> (keys not set will be excluded). Response will be similar to.</p>
@@ -126,6 +126,30 @@
                           }
                           ...
                     ]
+                </pre>
+            </div><!-- /.blog-post -->
+
+            <div class="blog-post">
+                <h2>Work Order Creation</h2>
+                <p>Creates new work order.</p>
+                <div class="highlight">
+                    <h4><span class="key">Endpoint</span>: <span class="val">https://api.onupkeep.com/api/public/workorder</span></h4>
+                    <h4><span class="key">Method</span>: <span class="val">POST</span></h4>
+                    <h4><span class="key">Parameters</span>:</h4>
+                    <ul>
+                        <li>sessionToken - The session token obtained from login.</li>
+                        <li>title - String representing the title of the work order.</li>
+                        <li>description - (Optional) String representing the description of the work order.</li>
+                        <li>priority - (Optional) Integer representing the priority of the work order allowed values-0,1,2,3. 0 is default.</li>
+                        <li>dueDate - (Optional) Integer representing the timestamp ie <b>milli-seconds</b>(not seconds) passed since Jan 01 1970 UTC.</li>
+                    </ul>
+                </div>
+                <p>On success the <b>id</b>(id of the workorder created) and <b>workOrderNo</b>(workorder serial number) will be returned.</p>
+                <pre>
+                    {
+                        "id": "MC6CwMlBWL"
+                        "workOrderNo": "165"
+                    }
                 </pre>
             </div><!-- /.blog-post -->
 
