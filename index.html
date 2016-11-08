@@ -154,6 +154,30 @@
             </div><!-- /.blog-post -->
 
             <div class="blog-post">
+                <h2>Work Order Request Creation (Without Login)</h2>
+                <p>Creates new workorder request.</p>
+                <div class="highlight">
+                    <h4><span class="key">Endpoint</span>: <span class="val">https://api.onupkeep.com/api/public/request</span></h4>
+                    <h4><span class="key">Method</span>: <span class="val">POST</span></h4>
+                    <h4><span class="key">Parameters</span>:</h4>
+                    <ul>
+                        <li>emailAddress - Email id of the person requesting.</li>
+                        <li>roleId - Role id of the company/firm/facility.</li>
+                        <li>title - String representing the title of the work order request.</li>
+                        <li>additionalInfo - (Optional) String representing the additional details of the work order.</li>
+                    </ul>
+                </div>
+                <p>On success the <b>id</b>(id of the workorder request created) and <b>title</b>(title of work order) request will be returned.</p>
+                <pre>
+
+                    {
+                        "id": "u6h3J4iaIZ",
+                        "title": "fix system"
+                    }
+                    </pre>
+                </div><!-- /.blog-post -->
+
+            <div class="blog-post">
                 <h2>Error Format</h2>
                 <p>All the error will have <b>code</b> and <b>message</b></p>
              <pre>
