@@ -110,7 +110,15 @@
                     <h4><span class="key">Parameters</span>:</h4>
                     <ul>
                         <li>sessionToken - The session token obtained from login.</li>
+                        <li>offset - (Optional) Integer representing offset value for pagination.</li>
+                        <li>limit - (Optional) Integer representing limit value for pagination.</li>
+                        <li>filters - (Optional) Array of  objects for filters. Each object will have <b>type</b> and <b>value</b> keys</li>
                     </ul>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>type</b>- Workorder field to filter on eg 'status'<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>value</b>- Value of field to filter eg.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;"filters": [{"type": "status", "value": "complete"}]<br>
+                    <b>Note</b>- filters are currently allowed on 'status' field only and the allowed values are-  'open', 'complete', 'onHold', 'inProgress'.
+
                 </div>
                 <p>On success array of work order object will be returned having the keys- <b>id, status, title, description, dueDate, endDueDate, dateCompleted, completedBy, createdAt, workOrderNo, category, time, cost, assignedBy, assignedTo, asset, location, team</b> (keys not set will be excluded). Response will be similar to.</p>
                 <pre>
