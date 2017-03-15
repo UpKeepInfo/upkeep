@@ -120,7 +120,7 @@
                     <b>Note</b>- filters are currently allowed on 'status' field only and the allowed values are-  'open', 'complete', 'onHold', 'inProgress'.
 
                 </div>
-                <p>On success array of work order object will be returned having the keys- <b>id, status, title, description, dueDate, endDueDate, dateCompleted, completedBy, createdAt, workOrderNo, category, time, cost, assignedBy, assignedTo, asset, location, team</b> (keys not set will be excluded). Response will be similar to.</p>
+                <p>On success array of work order object will be returned having the keys- <b>id, status, title, description, dueDate, endDueDate, dateCompleted, completedBy, createdAt, workOrderNo, category, time, cost, assignedBy, assignedTo, asset, location, team, requestedBy, formItems(having keys formName, formValue if set)</b> (keys not set will be excluded). Response will be similar to.</p>
                 <pre>
                     [
                          {
@@ -142,6 +142,18 @@
                             "cost": "100",
                             "time": "30",
                             "team": "Hardware Group",
+                            "requestedBy": "ghi@xyz.com",
+                            "formItems": [
+                                            {
+                                                "formName": "English",
+                                                "formValue": "87"
+                                            },
+                                            {
+                                                "formName": "Math",
+                                                "formValue": "88"
+                                            }
+                                          ]
+
                           }
                           ...
                     ]
