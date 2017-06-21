@@ -161,6 +161,134 @@
             </div><!-- /.blog-post -->
 
             <div class="blog-post">
+                <h2>Assets list</h2>
+                <p>Fetches list of Asset items.</p>
+                <div class="highlight">
+                    <h4><span class="key">Endpoint</span>: <span class="val">https://api.onupkeep.com/api/public/assets</span></h4>
+                    <h4><span class="key">Method</span>: <span class="val">POST</span></h4>
+                    <h4><span class="key">Content-Type</span>: <span class="val">application/json</span></h4>
+                    <h4><span class="key">Parameters</span>:</h4>
+                    <ul>
+                        <li>sessionToken - The session token obtained from login.</li>
+                        <li>offset - (Optional) Integer representing offset value for pagination.</li>
+                        <li>limit - (Optional) Integer representing limit value for pagination.</li>
+                    </ul>
+                </div>
+                <p>On success array of asset objects will be returned with key shown below. Any keys with unset value will be skipped.</p>
+                <pre>
+                    [
+                        {
+                            "id": "OTHNmL0szz",
+                            "location": {
+                                "id": "oo8lyqIDG3",
+                                "name": "delhi",
+                                "address": "Delhi, India",
+                                "longitude": 77.22739580000007,
+                                "latitude": 28.6618976
+                                },
+                            "name": "Printer",
+                            "model": "JGT Laser 23",
+                            "barcodeSerial": "Per patch mx",
+                            "parentAssetId": "uPScwR46ra",
+                            "description": "Laser printer",
+                            "isActive": true,
+                            "additionalInformation": "Works fine"
+                        }
+
+                        ...
+                    ]
+                </pre>
+            </div><!-- /.blog-post -->
+
+            <div class="blog-post">
+                <h2>Fetch perticular asset</h2>
+                <p>Fetches perticular asset by id.</p>
+                <div class="highlight">
+                    <h4><span class="key">Endpoint</span>: <span class="val">https://api.onupkeep.com/api/public/assets/:id</span></h4>
+                    <h4><span class="key">Method</span>: <span class="val">POST</span></h4>
+                    <h4><span class="key">Content-Type</span>: <span class="val">application/json</span></h4>
+                    <h4><span class="key">Parameters</span>:</h4>
+                    <ul>
+                        <li>sessionToken - The session token obtained from login.</li>
+                    </ul>
+                </div>
+                <p>For example to fetch asset with id <b>OTHNmL0szz</b> call will be made to https://api.onupkeep.com/api/public/assets/<b>OTHNmL0szz</b> .On success asset object will be returned with key shown below. Any keys with unset value will be skipped.</p>
+                <pre>
+                    {
+                            "id": "OTHNmL0szz",
+                            "location": {
+                                "id": "oo8lyqIDG3",
+                                "name": "delhi",
+                                "address": "Delhi, India",
+                                "longitude": 77.22739580000007,
+                                "latitude": 28.6618976
+                                },
+                            "name": "Printer",
+                            "model": "JGT Laser 23",
+                            "barcodeSerial": "Per patch mx",
+                            "parentAssetId": "uPScwR46ra",
+                            "description": "Laser printer",
+                            "isActive": true,
+                            "additionalInformation": "Works fine"
+                        }
+                </pre>
+            </div><!-- /.blog-post -->
+
+            <div class="blog-post">
+                <h2>Locations list</h2>
+                <p>Fetches list of location items.</p>
+                <div class="highlight">
+                    <h4><span class="key">Endpoint</span>: <span class="val">https://api.onupkeep.com/api/public/locations</span></h4>
+                    <h4><span class="key">Method</span>: <span class="val">POST</span></h4>
+                    <h4><span class="key">Content-Type</span>: <span class="val">application/json</span></h4>
+                    <h4><span class="key">Parameters</span>:</h4>
+                    <ul>
+                        <li>sessionToken - The session token obtained from login.</li>
+                        <li>offset - (Optional) Integer representing offset value for pagination.</li>
+                        <li>limit - (Optional) Integer representing limit value for pagination.</li>
+                    </ul>
+                </div>
+                <p>On success array of location objects will be returned with key shown below. Any keys with unset value will be skipped.</p>
+                <pre>
+                    [
+                        {
+                            "id": "oo8lyqIDG3",
+                            "name": "delhi",
+                            "address": "Delhi, India",
+                            "longitude": 77.22739580000007,
+                            "latitude": 28.6618976
+                        }
+
+                        ...
+                    ]
+                </pre>
+            </div><!-- /.blog-post -->
+
+            <div class="blog-post">
+                <h2>Fetch perticular location</h2>
+                <p>Fetches perticular location by id.</p>
+                <div class="highlight">
+                    <h4><span class="key">Endpoint</span>: <span class="val">https://api.onupkeep.com/api/public/locations/:id</span></h4>
+                    <h4><span class="key">Method</span>: <span class="val">POST</span></h4>
+                    <h4><span class="key">Content-Type</span>: <span class="val">application/json</span></h4>
+                    <h4><span class="key">Parameters</span>:</h4>
+                    <ul>
+                        <li>sessionToken - The session token obtained from login.</li>
+                    </ul>
+                </div>
+                <p>For example to fetch location with id <b>oo8lyqIDG3</b> call will be made to https://api.onupkeep.com/api/public/locations/<b>oo8lyqIDG3</b> .On success asset object will be returned with key shown below. Any keys with unset value will be skipped.</p>
+                <pre>
+                    {
+                            "id": "oo8lyqIDG3",
+                            "name": "delhi",
+                            "address": "Delhi, India",
+                            "longitude": 77.22739580000007,
+                            "latitude": 28.6618976
+                        }
+                </pre>
+            </div><!-- /.blog-post -->
+
+            <div class="blog-post">
                 <h2>Work Order Creation</h2>
                 <p>Creates new work order.</p>
                 <div class="highlight">
