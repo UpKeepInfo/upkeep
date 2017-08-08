@@ -120,7 +120,7 @@
                     <b>Note</b>- filters are currently allowed on 'status' field only and the allowed values are-  'open', 'complete', 'onHold', 'inProgress'.
 
                 </div>
-                <p>On success array of work order object will be returned having the keys- <b>id, status, title, description, dueDate, endDueDate, dateCompleted, completedBy, createdAt, workOrderNo, category, time, cost, assignedBy, assignedTo, asset, location, team, requestedBy, formItems(array of objects having keys formName, formValue if set)</b> (keys not set will be excluded). Response will be similar to.</p>
+                <p>On success array of work order object will be returned having the keys- <b>id, status, title, description, dueDate, endDueDate, dateCompleted, completedBy,completedById, createdAt, workOrderNo, category, time, cost, assignedBy, assignedById, assignedTo, assignedToId, asset, assetId, location,locationId, team, teamId, requestedBy, requestedById, formItems(array of objects having keys formName, formValue if set)</b> (keys not set will be excluded). Response will be similar to.</p>
                 <pre>
                     [
                          {
@@ -134,15 +134,22 @@
                             "dateCompleted": "2016-10-20T10:17:13.712Z",
                             "workOrderNo": "150",
                             "assignedBy": "abc@xyz.com",
+                            "assignedById": "LfGn43LMh3",
                             "assignedTo": "def@xyz.com",
+                            "assignedToId": "Lhhn43LMh3",
                             "completedBy": "def@xyz.com",
+                            "completedById": "Nfhnt3LMh3",
                             "asset": "printer",
+                            "assetId": "gHhn43LMh3",
                             "location": "New York",
+                            "locationId": "Kfhn03LMh3",
                             "category": "Damage",
                             "cost": "100",
                             "time": "30",
                             "team": "Hardware Group",
+                            "teamId": "Prfhn43LML",
                             "requestedBy": "ghi@xyz.com",
+                            "requestedById": "FfhnFFLMh3",
                             "formItems": [
                                             {
                                                 "formName": "English",
